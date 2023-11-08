@@ -11,6 +11,11 @@ Matrix::Matrix(int kolumna, int wiersz): kolumna(kolumna),wiersz(wiersz), errorF
 	{
 		matrix[i] = new double[kolumna];
 	}
+	for (int i=0;i<wiersz;i++) {
+		for(int j=0;i<kolumna;j++) {
+			matrix[i][j]=0.0;
+		}
+	}
 }
 
 Matrix::~Matrix()

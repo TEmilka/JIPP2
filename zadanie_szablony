@@ -1,0 +1,115 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+//================================================ZADANIE 1==========================================================
+
+template <typename T>
+T min(T a, T b)
+{
+    if (a > b)
+        return b;
+    else
+        return a;
+}
+
+// ================================================ZADANIE 2==========================================================
+template<typename T>
+T max(T a, T b)
+{
+    if (a > b)
+        return a;
+    else
+        return b;
+}
+template <typename T>
+int find(vector<T> vecto,T wart)
+{
+    for (int i = 0; i < vecto.size; i++)
+    {
+        if (vecto[i] == wart)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+//====================================================ZADANIE 3======================================================
+template <typename T1, typename T2, typename T3>
+class Triple
+{
+    T1 x;
+    T2 y;
+    T3 z;
+
+public:
+    Triple();
+    Triple(T1 a, T2 b, T3 c)
+    {
+        x = a;
+        y = b;
+        z = c; 
+    }
+
+    T1 getFirst()
+    {
+        return x;
+    }
+    T2 getSecond()
+    {
+        return y;
+    }
+    T3 getThird()
+    {
+        return z;
+    }
+
+    void setFirst(T1 a)
+    {
+        this->x = a;
+    }
+    void setSecond(T2 b)
+    {
+        this->y = b;
+    }
+    void setThird(T3 c)
+    {
+        this->z = c;
+    }
+
+
+
+};
+// ==================================ZADANIE 4=============================================================
+template <typename T,unsigned size>
+class MyArray
+{
+    T tab[size];
+
+public:
+    setValueOn(index, wartość);
+    getValoue(index);
+};
+
+
+
+int main()
+{
+   // Triple<int, int, int> t();
+    Triple<int, double, int> t2(2, 3.14, 8);
+
+    cout << t2.getFirst() << endl;
+    cout << t2.getSecond() << endl;
+    cout << t2.getThird() << endl << endl;
+    
+
+    t2.setFirst(5);
+    t2.setSecond(20.45);
+    t2.setThird(15);
+
+    cout << t2.getFirst() << endl;
+    cout << t2.getSecond() << endl;
+    cout << t2.getThird() << endl;
+
+}

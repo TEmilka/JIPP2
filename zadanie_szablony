@@ -99,7 +99,15 @@ public:
             tab[index] = wartosc;
         }
 }
-    getValoue(index);
+    getValoue(index)
+{
+        if (index > size || index < 0)
+        {
+            cout << "out_of_range" << endl;
+        }
+        else
+            cout << tab[index] << endl;
+    }
 };
 
 
